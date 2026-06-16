@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎉 Chaos Mode</h1>
+      <p class="subtitle">Déchaîne le chaos sur cette page !</p>
+    </header>
+
+    <div class="controls">
+      <button id="chaosTotal" class="btn btn-chaos">🔥 CHAOS TOTAL</button>
+      <button id="stopAll" class="btn btn-stop">⏹️ STOP</button>
+    </div>
+
+    <div id="effectsList" class="effects">
+      <div class="loading">Connexion à la page...</div>
+    </div>
+
+    <div class="intensity">
+      <label for="intensitySlider">💥 Intensité</label>
+      <div class="intensity-row">
+        <input type="range" id="intensitySlider" min="1" max="5" value="3">
+        <span id="intensityLabel">3 / 5</span>
+      </div>
+    </div>
+
+    <footer>
+      <span>🐛 <a href="#" id="reportLink">Signaler un bug</a></span>
+      <span>⭐ <a href="#" id="githubLink">GitHub</a></span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

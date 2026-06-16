@@ -1,0 +1,71 @@
+@keyframes chaos-shake {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-5px) rotate(-2deg); }
+  20% { transform: translateX(5px) rotate(2deg); }
+  30% { transform: translateX(-5px) rotate(-2deg); }
+  40% { transform: translateX(5px) rotate(2deg); }
+  50% { transform: translateX(-3px) rotate(-1deg); }
+  60% { transform: translateX(3px) rotate(1deg); }
+  70% { transform: translateX(-3px) rotate(-1deg); }
+  80% { transform: translateX(3px) rotate(1deg); }
+  90% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+.chaos-shake {
+  animation: chaos-shake 0.5s ease-in-out infinite !important;
+  display: inline-block !important;
+}
+
+@keyframes chaos-rainbow {
+  0% { color: #ff0000; }
+  12% { color: #ff8800; }
+  25% { color: #ffff00; }
+  37% { color: #00ff00; }
+  50% { color: #00ff88; }
+  62% { color: #0088ff; }
+  75% { color: #8800ff; }
+  87% { color: #ff0088; }
+  100% { color: #ff0000; }
+}
+
+.chaos-rainbow {
+  animation: chaos-rainbow 0.8s linear infinite !important;
+}
+
+@keyframes chaos-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.chaos-spin {
+  animation: chaos-spin 2s linear infinite !important;
+}
+
+.chaos-blur {
+  filter: blur(5px) !important;
+  transition: filter 0.3s ease !important;
+}
+
+.chaos-blur:hover {
+  filter: blur(0) !important;
+}
+
+.chaos-emoji {
+  position: fixed !important;
+  pointer-events: none !important;
+  z-index: 2147483647 !important;
+  font-size: 28px !important;
+  animation: chaos-emoji-fade 1.2s ease-out forwards !important;
+}
+
+@keyframes chaos-emoji-fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.3) rotate(360deg);
+  }
+}
